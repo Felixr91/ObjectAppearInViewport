@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+      
+      <div class="container">
+        <div class="row d-flex justify-content-center flex-column" style="height: 80rem; width: 100vw;">
+          <div class="blue" style="height: 50rem; width: 50rem; background-color: blue;">
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row d-flex justify-content-center flex-column" style="height: 80rem; width: 100vw;">
+          <div class="yellow" style="height: 50rem; width: 50rem; transition: all 3s ease;">
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row d-flex justify-content-center flex-column" style="height: 80rem; width: 100vw;">
+          <div class="red" style="height: 50rem; width: 50rem; background-color: red;">
+            
+          </div>
+        </div>
+      </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-fracs/1.0.1/jquery.fracs.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        function inViewport( element ){
+          // Get the elements position relative to the viewport
+          var bb = element.getBoundingClientRect();
+          // Check if the element is outside the viewport
+          // Then invert the returned value because you want to know the opposite
+          return !(bb.top > innerHeight || bb.bottom < 0);
+        }
+
+        var myElement = document.querySelector( '.yellow' );
+
+        // Listen for the scroll event
+        document.addEventListener( 'scroll', event => {
+
+          // Check the viewport status
+          if( inViewport( myElement ) ){ 
+            myElement.style.background = 'yellow'; 
+          } else {
+            myElement.style.background = ''; 
+          }
+        })
+      });
+    </script>
+
+
+  </body>
+</html>
